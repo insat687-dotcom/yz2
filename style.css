@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+header h1 { font-size: 2.2rem; font-weight:700; margin-bottom:8px; }
+header p { font-size:1rem; opacity:0.95; font-weight:300; }
+
+main { padding: 30px; }
+
+.file-label {
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 18px;
+  background: linear-gradient(135deg,#f8fafc,#e2e8f0);
+  border:2px dashed #cbd5e1;
+  border-radius:12px;
+  cursor:pointer;
+  color:#475569;
+}
+
+.file-name { margin-top:12px; padding:8px 12px; background:#f1f5f9; border-radius:8px; display:none; color:#475569; }
+
+.file-name.show { display:block; }
+
+.input-group { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
+
+#questionInput {
+  width:100%; padding:16px; border-radius:10px; border:2px solid #e2e8f0; min-height:120px; resize:vertical; background:#fafbfc;
+}
+
+.ask-button {
+  align-self:flex-start; padding:12px 24px; background: linear-gradient(135deg,#4f46e5,#7c3aed); color:white; border:none; border-radius:10px; cursor:pointer; display:flex; align-items:center; gap:8px;
+}
+
+.loading-spinner {
+  width:18px; height:18px; border:2px solid rgba(255,255,255,0.3); border-radius:50%; border-top-color:white; animation: spin 1s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.answer-section { margin-top:20px; padding:18px; border-radius:10px; background:linear-gradient(135deg,#f0f9ff,#e0f2fe); border:1px solid #0ea5e9; }
+
+.answer-text { white-space:pre-wrap; color:#0f172a; line-height:1.6; }
+
+.error-section { margin-top:12px; padding:12px; border-radius:8px; background:linear-gradient(135deg,#fef2f2,#fee2e2); border:1px solid #f87171; color:#dc2626; }
